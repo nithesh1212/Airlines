@@ -7,10 +7,71 @@
             "countryname": "India"
         },
         {
-            "name": "Doha, Hamad International Airport",
-            "citycode": "DOH",
-            "city": "Doha",
-            "countryname": "Qatar"
+            "name": "Delhi, Indira Gandhi International Airport",
+            "citycode": "DEL",
+            "city": "Delhi",
+            "countryname": "India"
+        },
+		 {
+            "name": "Chennai, Chennai International Airport",
+            "citycode": "MAA",
+            "city": "Chennai",
+            "countryname": "India"
+        },
+		 {
+            "name": "Banglore, Banglore International Airport",
+            "citycode": "BLR",
+            "city": "Banglore",
+            "countryname": "India"
+        },
+		 {
+            "name": "Cochin, Cochin International Airport",
+            "citycode": "COK",
+            "city": "Cochin",
+            "countryname": "India"
+        },
+		 {
+            "name": "Orlando, Orlando International Airport",
+            "citycode": "MCO",
+            "city": "Orlando",
+            "countryname": "USA"
+        },
+		 {
+            "name": "Boston, General Edward Lawrence Logan International Airport",
+            "citycode": "BOS",
+            "city": "Boston",
+            "countryname": "USA"
+        },
+		 {
+            "name": "Washington, Washington Dulles International Airport",
+            "citycode": "IAD",
+            "city": "Washington",
+            "countryname": "USA"
+        },
+		 {
+            "name": "Chicago, Chicago O’Hare International Airport",
+            "citycode": "ORD",
+            "city": "Chicago",
+            "countryname": "USA"
+        },
+		 {
+            "name": "New York, John F Kennedy International Airport",
+            "citycode": "JFK",
+            "city": "New York",
+            "countryname": "USA"
+        },
+		 {
+            "name": "San Francisco, San Francisco International Airport",
+            "citycode": "SFO",
+            "city": "San Francisco",
+            "countryname": "USA"
+        },
+		
+		 {
+            "name": "Las Vegas, McCarran International Airport",
+            "citycode": "LAS",
+            "city": "Las Vegas",
+            "countryname": "USA"
         }
     ]
 }

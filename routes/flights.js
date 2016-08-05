@@ -4,19 +4,19 @@ var Store = require("jfs");
 var db = new Store("data",{pretty:true});
 
 /* GET users listing. */
-router.get('/:id', function(req, res, next) {
-	var date = req.query.date
+router.get('/', function(req, res, next) {
 	var obj = db.getSync("flight");
-	var isRecordFound = false;
-    	obj.flights.map(function(flight){
-    		if(flight.id.toLowerCase()===(req.params.id).toLowerCase() && flight.departure_date === date){
-    			isRecordFound = true;
-    			res.send(flight);
-    		}
+   //var query = req.params.query;
+	//	query = query.toLowerCase();
+    var result = {
+        "flight":[]
+    };
+    	obj.flight.map(function(flight){
+    	//	if(airport.name.toLowerCase().indexOf(query)> -1 || airport.city.toLowerCase().indexOf(query)>-1 || airport.countryname.toLowerCase().indexOf(query)>-1){
+    		    result.flight.push(flight);
+    		//}
     	});
-    	if(!isRecordFound){
-    		res.send({"message":"No Record Found"});
-    	}
+    res.send(result);
 });
 
 router.get('/book/search', function(req, res, next) {
