@@ -3,7 +3,7 @@
         {
             "id": "HYOR888",
             "itacode_departure":"HYD",
-            "itacode_arrival":"ORD"
+            "itacode_arrival":"ORD",
             "departure_date": "2016-08-19",
             "departure_time": "16:50",
             "expected_arivaldate": "2016-08-20",
