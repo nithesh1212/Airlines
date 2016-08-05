@@ -2,74 +2,74 @@
     "airports": [
         {
             "name": "Hyderabad, Rajiv Gandhi International Airport",
-            "citycode": "HYD",
+            "itacode": "HYD",
             "city": "Hyderabad",
             "countryname": "India"
         },
         {
             "name": "Delhi, Indira Gandhi International Airport",
-            "citycode": "DEL",
+            "itacode": "DEL",
             "city": "Delhi",
             "countryname": "India"
         },
 		 {
             "name": "Chennai, Chennai International Airport",
-            "citycode": "MAA",
+            "itacode": "MAA",
             "city": "Chennai",
             "countryname": "India"
         },
 		 {
             "name": "Banglore, Banglore International Airport",
-            "citycode": "BLR",
+            "itacode": "BLR",
             "city": "Banglore",
             "countryname": "India"
         },
 		 {
             "name": "Cochin, Cochin International Airport",
-            "citycode": "COK",
+            "itacode": "COK",
             "city": "Cochin",
             "countryname": "India"
         },
 		 {
             "name": "Orlando, Orlando International Airport",
-            "citycode": "MCO",
+            "itacode": "MCO",
             "city": "Orlando",
             "countryname": "USA"
         },
 		 {
             "name": "Boston, General Edward Lawrence Logan International Airport",
-            "citycode": "BOS",
+            "itacode": "BOS",
             "city": "Boston",
             "countryname": "USA"
         },
 		 {
             "name": "Washington, Washington Dulles International Airport",
-            "citycode": "IAD",
+            "itacode": "IAD",
             "city": "Washington",
             "countryname": "USA"
         },
 		 {
             "name": "Chicago, Chicago O’Hare International Airport",
-            "citycode": "ORD",
+            "itacode": "ORD",
             "city": "Chicago",
             "countryname": "USA"
         },
 		 {
             "name": "New York, John F Kennedy International Airport",
-            "citycode": "JFK",
+            "itacode": "JFK",
             "city": "New York",
             "countryname": "USA"
         },
 		 {
             "name": "San Francisco, San Francisco International Airport",
-            "citycode": "SFO",
+            "itacode": "SFO",
             "city": "San Francisco",
             "countryname": "USA"
         },
 		
 		 {
             "name": "Las Vegas, McCarran International Airport",
-            "citycode": "LAS",
+            "itacode": "LAS",
             "city": "Las Vegas",
             "countryname": "USA"
         }

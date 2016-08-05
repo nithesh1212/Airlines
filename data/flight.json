@@ -2,23 +2,12 @@
     "flight": [
         {
             "id": "HYOR888",
-            "departureAirport": {
-                "name": "Hyderabad",
-                "code": "HYD"
-            },
-            "arrivalAirport": {
-                "name": "Orlando",
-                "code": "ORD"
-            },
+            "itacode_departure":"HYD",
+            "itacode_arrival":"ORD"
             "departure_date": "2016-08-19",
             "departure_time": "16:50",
             "expected_arivaldate": "2016-08-20",
             "expected_arivaltime": "18:30",
-            "typeoffood": [
-                "Vegetarian Meal",
-                "Non-vegetarian Meal",
-                "Baby Meal"
-            ],
             "class_price": [
                 {
                     "Class": "Economy",
@@ -36,23 +25,11 @@
         },
 		   {
             "id": "MASF338",
-            "departureAirport": {
-                "name": "Chennai",
-                "code": "MAA"
-            },
-            "arrivalAirport": {
-                "name": "San Frisco",
-                "code": "SFO"
-            },
+            "itacode_departure": "MAA",
+            "itacode_arrival": "SFO",
             "departure_date": "2016-08-19",
             "departure_time": "16:50",
             "expected_arivaldate": "2016-08-20",
-            "expected_arivaltime": "18:30",
-            "typeoffood": [
-                "Vegetarian Meal",
-                "Non-vegetarian Meal",
-                "Baby Meal"
-            ],
             "class_price": [
                 {
                     "Class": "Economy",
@@ -70,23 +47,12 @@
         },
 		   {
             "id": "BLRW833",
-            "departureAirport": {
-                "name": "Banglore",
-                "code": "BLR"
-            },
-            "arrivalAirport": {
-                "name": "Washington",
-                "code": "IAD"
-            },
+            "itacode_departure":"BLR",
+            "itacode_arrival": "IAD",
             "departure_date": "2016-08-19",
             "departure_time": "16:50",
             "expected_arivaldate": "2016-08-20",
             "expected_arivaltime": "18:30",
-            "typeoffood": [
-                "Vegetarian Meal",
-                "Non-vegetarian Meal",
-                "Baby Meal"
-            ],
             "class_price": [
                 {
                     "Class": "Economy",
@@ -104,23 +70,12 @@
         },
 		   {
             "id": "KOBO543",
-            "departureAirport": {
-                "name": "Cochin",
-                "code": "COK"
-            },
-            "arrivalAirport": {
-                "name": "Boston",
-                "code": "BOS"
-            },
+            "itacode_departure": "COK",
+            "itacode_arrival":"BOS",
             "departure_date": "2016-08-19",
             "departure_time": "16:50",
             "expected_arivaldate": "2016-08-20",
             "expected_arivaltime": "18:30",
-            "typeoffood": [
-                "Vegetarian Meal",
-                "Non-vegetarian Meal",
-                "Baby Meal"
-            ],
             "class_price": [
                 {
                     "Class": "Economy",
@@ -138,23 +93,12 @@
         },
 		   {
             "id": "NDNY333",
-            "departureAirport": {
-                "name": "Delhi",
-                "code": "DEL"
-            },
-            "arrivalAirport": {
-                "name": "New York",
-                "code": "NYK"
-            },
+            "itacode_departure":"DEL",
+            "itacode_arrival":"NYK",
             "departure_date": "2016-08-19",
             "departure_time": "16:50",
             "expected_arivaldate": "2016-08-20",
             "expected_arivaltime": "18:30",
-            "typeoffood": [
-                "Vegetarian Meal",
-                "Non-vegetarian Meal",
-                "Baby Meal"
-            ],
             "class_price": [
                 {
                     "Class": "Economy",
