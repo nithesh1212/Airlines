@@ -19,29 +19,29 @@ router.get('/', function(req, res, next) {
     res.send(result);
 });
 
-
-	router.post('/book/ticket', function(req, res, next) {
-	var payload = req.body
-	var obj = db.getSync("book-a-flight");
+router.get('/search', function(req, res, next) {
 	
-    var text = "";
-    var possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
-
-    for( var i=0; i < 4; i++ ){
-        text += possible.charAt(Math.floor(Math.random() * possible.length));
-    }
-
-	var result;
-	  obj.flights.map(function(flight){
-    		if(flight.id === payload.id){
-    			flight.bookingId = 'AL'+text;
-    			flight.bookedclass = payload.category;
-    		    result = flight;
-    		}
+	var source = req.query.source;
+	var dest = req.query.dest;
+	var date = req.query.date
+	//var returndate = req.query.returndate;
+	var obj = db.getSync("book-a-flight");
+	var result = {
+        "flight":[]
+    };		
+    	obj.flights.map(function(flight){
+    		if(flight.itacode_departure.code === source && flight.itacode_arrival.code === departure && departure_date === date){
+    			//flight.type = "going";
+    			result.flights.push(flight);
+    		} /*else if(flight.date === date && flight.departureairport.code === to && flight.arrivalairport.code === from){
+               flight.type = "return";
+               result.flights.push(flight);
+    		}*/
     	});
-      
-	  res.send(result);
+    res.send(result);
+    	
 });
+
 	
 	
 module.exports = router;

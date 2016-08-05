@@ -11,6 +11,7 @@ var flights = require('./routes/flights');
 var airports = require('./routes/airport');
 var meals = require('./routes/meals');
 var bookaflight = require('./routes/bookaflight');
+var fs = require('./routes/fs');
 
 var app = express();
 
@@ -37,6 +38,7 @@ app.use('/flights', flights);
 app.use('/airports', airports);
 app.use('/meals', meals);
 app.use('/bookaflight', bookaflight);
+app.use('/fs', fs);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
