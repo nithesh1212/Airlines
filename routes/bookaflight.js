@@ -23,8 +23,9 @@ var db = new Store("data",{pretty:true});
     		if(flight.id === payload.id){
     			flight.bookingId = 'KL'+text;
     			flight.bookedclass = payload.category;
-				flight.adults = payload.adults;
+				flight.adult = payload.adult;
 				flight.child = payload.child;
+				flight.dateofjourney =  payload.dateofjourney
     		    result = flight;
     		}
     	});

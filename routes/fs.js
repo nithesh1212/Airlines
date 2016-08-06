@@ -16,7 +16,7 @@ router.get('/', function(req, res, next) {
         "flight":[]
     };		
     	obj.flight.map(function(flight){
-    		if(flight.itacode_departure === source && flight.itacode_arrival === dest && flight.departure_date === date){
+    		if(flight.itacode_departure === source && flight.itacode_arrival 	=== dest ){
     			//flight.type = "going";
     			result.flight.push(flight);
     		} /*else if(flight.date === date && flight.departureairport.code === to && flight.arrivalairport.code === from){
