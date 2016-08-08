@@ -3,7 +3,7 @@
         {
             "id": "HYOR888",
             "itacode_departure":"HYD",
-            "itacode_arrival":"ORD",
+            "itacode_arrival":"MCO",
             "departure_date": "2016-08-19",
             "departure_time": "14:50",
             "expected_arivaldate": "2016-08-20",
@@ -96,7 +96,7 @@
 		   {
             "id": "NDNY333",
             "itacode_departure":"DEL",
-            "itacode_arrival":"NYK",
+            "itacode_arrival":"JFK",
             "departure_date": "2016-08-29",
             "departure_time": "16:50",
             "expected_arivaldate": "2016-08-30",
