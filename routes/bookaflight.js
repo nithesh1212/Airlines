@@ -34,6 +34,12 @@ var db = new Store("data",{pretty:true});
 				passengerdetails.address = payload.passengerdetails.address;
 				passengerdetails.url = payload.passengerdetails.url;
 				flight.passengerdetails = passengerdetails;
+				var carddetails = {};
+				carddetails.type = payload.carddetails.type;
+				carddetails.cardno = payload.carddetails.cardno;
+				carddetails.cardname = payload.carddetails.nameoncard;
+				carddetails.cardexp = payload.carddetails.cardexp;
+				carddetails.cardpin = payload.carddetails.cardpin;
     		    result = flight;
     		}
     	});
