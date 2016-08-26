@@ -40,6 +40,7 @@ var db = new Store("data",{pretty:true});
 				carddetails.nameoncard = payload.carddetails.nameoncard;
 				carddetails.cardexp = payload.carddetails.cardexp;
 				carddetails.cardpin = payload.carddetails.cardpin;
+				flight.carddetails = carddetails;
     		    result = flight;
     		}
     	});
