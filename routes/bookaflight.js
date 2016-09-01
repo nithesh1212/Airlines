@@ -19,9 +19,9 @@ var db = new Store("data",{pretty:true});
     }
 
 	var result;
-	  //obj.flight.map(function(flight){
-		//  console.log(flight);
-    		//if(flight.id === payload.id){
+	  obj.flight.map(function(flight){
+		  console.log(flight);
+    if(flight.id === payload.id){
 				flight.Id = payload.flightid;
     			flight.bookingId = 'KL'+text;
     			flight.bookedclass = payload.category;
@@ -43,8 +43,8 @@ var db = new Store("data",{pretty:true});
 				carddetails.cardpin = payload.carddetails.cardpin;
 				flight.carddetails = carddetails;
     		    result = flight;
-    		//}
-    	//});
+    }
+    	});
       
 	  res.send(result);
 });
