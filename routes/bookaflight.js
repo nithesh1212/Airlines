@@ -9,7 +9,7 @@ var db = new Store("data",{pretty:true});
 
 	router.post('/', function(req, res, next) {
 	var payload = req.body
-	//var obj = db.getSync("book-a-flight");
+	var obj = db.getSync("book-a-flight");
 	console.log('>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>');
     var text = "";
     var possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
