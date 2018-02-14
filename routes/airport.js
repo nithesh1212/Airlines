@@ -15,7 +15,7 @@ var options = {
 		},
 		body: {
 				"roomId": "Y2lzY29zcGFyazovL3VzL1JPT00vMWRmNTNlNjAtMTE0NC0xMWU4LThjMTAtMTNjMDRhYWE1YTk3",
-				"personEmail": "vmasakat@cisco.com",
+				"personEmail": "vemachir@cisco.com",
 				"isModerator": false
 		},
 		json: true // Automatically stringifies the body to JSON
