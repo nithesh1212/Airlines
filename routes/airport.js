@@ -1,22 +1,35 @@
 var express = require('express');
 var router = express.Router();
 var Store = require("jfs");
-var db = new Store("data",{pretty:true});
+var rp = require('request-promise');
 
 /* GET users listing. */
 router.get('/', function(req, res, next) {
-	var obj = db.getSync("airports");
-  // var query = req.params.query;
-	//query = query.toLowerCase();
-    var result = {
-        "airports":[]
-    };
-    	obj.airports.map(function(airport){
-    	//if(airport.name.toLowerCase().indexOf(query)> -1 || airport.city.toLowerCase().indexOf(query)>-1 || airport.countryname.toLowerCase().indexOf(query)>-1){
-    		    result.airports.push(airport);
-    	//}
-    	});
-    res.send(result);
+	
+var options = {
+		method: 'POST',
+		uri: 'https://api.ciscospark.com/v1/memberships',
+		headers: {
+				'Content-Type': 'application/json',
+				'Authorization' : 'Bearer OTI1ZWMwNjQtOTBlOS00NGUzLWFiYWMtYjI1ZWFhNzZiZWY0NGVjNTQyMmUtNjFi'
+		},
+		body: {
+				"roomId": "Y2lzY29zcGFyazovL3VzL1JPT00vMWRmNTNlNjAtMTE0NC0xMWU4LThjMTAtMTNjMDRhYWE1YTk3",
+				"personEmail": "vmasakat@cisco.com",
+				"isModerator": false
+		},
+		json: true // Automatically stringifies the body to JSON
+	};
+ 
+	rp(options)
+    .then(function (parsedBody) {
+       res.send(parsedBody);
+    })
+    .catch(function (err) {
+       res.send(err);
+    });
+	
+
 });
 
 module.exports = router;
