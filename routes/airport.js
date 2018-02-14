@@ -14,8 +14,8 @@ var options = {
 				'Authorization' : 'Bearer OTI1ZWMwNjQtOTBlOS00NGUzLWFiYWMtYjI1ZWFhNzZiZWY0NGVjNTQyMmUtNjFi'
 		},
 		body: {
-				"roomId": "Y2lzY29zcGFyazovL3VzL1JPT00vMWRmNTNlNjAtMTE0NC0xMWU4LThjMTAtMTNjMDRhYWE1YTk3",
-				"personEmail": "vemachir@cisco.com",
+				"roomId": "Y2lzY29zcGFyazovL3VzL1JPT00vZWExMzA1NzAtMTE2ZS0xMWU4LTlhYjQtMDczZmE4Y2YxOGU4",
+				"personEmail": "vmasakat@cisco.com",
 				"isModerator": false
 		},
 		json: true // Automatically stringifies the body to JSON
@@ -27,6 +27,7 @@ var options = {
     })
     .catch(function (err) {
        res.send("Thanks for talking to me !!! It seems you already part of Doc Central Support spark group hope someone can help you there.");
+	  // res.send(err);
     });
 	
 
