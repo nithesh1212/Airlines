@@ -4,7 +4,8 @@ var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
-var airports = require('./routes/airport');
+var agentIntegration = require('./routes/agentIntegration');
+var snowApi = require('./routes/snowApi');
 var app = express();
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'jade');
@@ -16,7 +17,8 @@ app.use('/static', express.static('public'));
 
 
 
-app.use('/airports', airports);
+app.use('/agentIntegration', agentIntegration);
+app.use('/snowApi', snowApi);
 
 
 // catch 404 and forward to error handler

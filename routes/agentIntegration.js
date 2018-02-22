@@ -23,7 +23,7 @@ var options = {
  
 	rp(options)
     .then(function (parsedBody) {
-       res.send("Thanks for talking to me !!! You have have been added to Doc Central Support group in spark. :)");
+       res.send("It seems you got bored with me, anyway I'm going to connect you to Doc Central Support group in spark. :)");
     })
     .catch(function (err) {
        res.send("Thanks for talking to me !!! It seems you already part of Doc Central Support spark group hope someone can help you there.");
