@@ -26,8 +26,7 @@ var options = {
 	rp(options)
     .then(function (parsedBody) {
 
-    	res.send(parsedBody);
-       //res.send("It seems you got bored with me, anyway I'm going to connect you to Doc Central Support group in spark. :)");
+    	res.send("Your case has been created your case number is "+parsedBody.result.number);
     })
     .catch(function (err) {
        //res.send("Thanks for talking to me !!! It seems you already part of Doc Central Support spark group hope someone can help you there.");
