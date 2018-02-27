@@ -26,7 +26,11 @@ var options = {
 	rp(options)
     .then(function (parsedBody) {
 
-    	res.send("Your case has been created your case number is "+parsedBody.result.number);
+    	var number = parsedBody.result.number;
+		var caseLink = "https://dev28393.service-now.com/nav_to.do?uri=incident.do?sys_id="+parsedBody.result.sys_id+"%26sysparm_view=ess";		
+		var result = number.link(caseLink);
+		
+		res.send("Your case has been created your case number is "+result);
     })
     .catch(function (err) {
        //res.send("Thanks for talking to me !!! It seems you already part of Doc Central Support spark group hope someone can help you there.");
