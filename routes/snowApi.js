@@ -28,7 +28,7 @@ var options = {
 
     	var number = parsedBody.result.number;
 		var caseLink = "https://dev28393.service-now.com/nav_to.do?uri=incident.do?sys_id="+parsedBody.result.sys_id+"%26sysparm_view=ess";		
-		var result = number.link(caseLink);
+		var result = "<a target='_blank' href='"+caseLink+"'>"+number+"</a>" ;
 		
 		res.send("Your case has been created your case number is "+result);
     })
