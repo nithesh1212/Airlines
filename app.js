@@ -6,6 +6,7 @@ var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var agentIntegration = require('./routes/agentIntegration');
 var snowApi = require('./routes/snowApi');
+var api = require('./routes/api');
 var app = express();
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'jade');
@@ -19,6 +20,7 @@ app.use('/static', express.static('public'));
 
 app.use('/agentIntegration', agentIntegration);
 app.use('/snowApi', snowApi);
+app.use('/document/details', api);
 
 
 // catch 404 and forward to error handler
