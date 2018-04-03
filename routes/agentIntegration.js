@@ -7,16 +7,25 @@ var rp = require('request-promise');
 router.post('/', function(req, res, next) {
 	
 	
-	var nodePath = req.body.nodePath;
+	var email = req.body.email;
 	
 	
 	
 var options = {
-		method: 'GET',
-		uri: 'http://alfcms-app-stg-01:8080/alfresco/service/dcl/permissions/view?'+nodePath,
+
+		method: 'POST',
+		uri: 'https://api.ciscospark.com/v1/memberships',
 		headers: {
-				
-				'Authorization' : 'Basic YWxmY21hZG06YWxmY21hZG1Ab2N0MTQ='
+
+				'Content-type'	: 'application/json',				
+				'Authorization' : 'Bearer MDM1NDBmNDYtYWE2Yi00OWJiLTg2ZmEtM2JjM2JjNzBkMjFhMjExZWQ5Y2ItMWQ3'
+		},
+
+		body : {
+
+				'roomId': 'Y2lzY29zcGFyazovL3VzL1JPT00vMzQ4ODY1YTAtMzY1ZS0xMWU4LWI4YjgtZDdlMjY2ZGEzOTRm',
+				'personEmail': email,
+				'isModerator': false
 		},
 		
 		json: true // Automatically stringifies the body to JSON
