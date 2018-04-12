@@ -29,7 +29,7 @@ var options = {
     .then(function (parsedBody) {
 		
      var output = JSON.stringify(parsedbody);
-      res.send({'speech': 'This is for speech', 'displayText':output});
+     res.send(JSON.stringify({ 'speech': output, 'displayText': output }));
     
     })
     .catch(function (err) {
