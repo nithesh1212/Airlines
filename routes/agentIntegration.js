@@ -27,7 +27,9 @@ var options = {
  
 	rp(options)
     .then(function (parsedBody) {
-      res.send({'speech': 'This is for speech', 'displayText':parsedBody});
+		
+     var output = JSON.stringify(parsedbody);
+      res.send({'speech': 'This is for speech', 'displayText':output});
     
     })
     .catch(function (err) {
