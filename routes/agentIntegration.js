@@ -33,7 +33,8 @@ var options = {
     
     })
     .catch(function (err) {
-	  res.send(JSON.stringify({ 'speech': err, 'displayText': err }));
+		 var error = JSON.stringify(err);
+	  res.send(JSON.stringify({ 'speech': error, 'displayText': error }));
 	 
     });
 	
