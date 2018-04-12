@@ -27,11 +27,11 @@ var options = {
  
 	rp(options)
     .then(function (parsedBody) {
-      res.send('speech': 'This is for speech', 'displayText':parsedBody);
+      res.send({'speech': 'This is for speech', 'displayText':parsedBody});
     
     })
     .catch(function (err) {
-	  res.send(JSON.stringify({ 'speech': error, 'displayText': error }));
+	  res.send(JSON.stringify({ 'speech': err, 'displayText': err }));
 	 
     });
 	
