@@ -1,48 +1,58 @@
-var express = require('express');
-var router = express.Router();
-var Store = require("jfs");
-var rp = require('request-promise');
+// Copyright 2017, Google, Inc.
+// Licensed under the Apache License, Version 2.0 (the 'License');
+// you may not use this file except in compliance with the License.
+// You may obtain a copy of the License at
+//
+//    http://www.apache.org/licenses/LICENSE-2.0
+//
+// Unless required by applicable law or agreed to in writing, software
+// distributed under the License is distributed on an 'AS IS' BASIS,
+// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+// See the License for the specific language governing permissions and
+// limitations under the License.
 
-/* GET users listing. */
-router.post('/', function(req, res, next) {
-	
-	
-	var email = req.body.email;
-	
-	
-	
-var options = {
+'use strict';
+const http = require('http');
+const host = 'https://api.ciscospark.com/v1/rooms';
 
-		method: 'POST',
-		uri: 'https://api.ciscospark.com/v1/memberships',
-		headers: {
+  // Call the weather API
+  callWeatherApi().then((output) => {
+    // Return the results of the weather API to Dialogflow
+    res.setHeader('Content-Type', 'application/json');
+    res.setHeader('Authorization' , 'Bearer MTllZTIwYjAtMGY2ZS00OTJhLWFkMGYtODI2NTIxYjc1NjA4YjE1NmU3NzEtYmUx');
+    res.send(JSON.stringify({ 'speech': output, 'displayText': output }));
+  }).catch((error) => {
+    // If there is an error let the user know
+    res.setHeader('Content-Type', 'application/json');
+    res.setHeader('Authorization' , 'Bearer MTllZTIwYjAtMGY2ZS00OTJhLWFkMGYtODI2NTIxYjc1NjA4YjE1NmU3NzEtYmUx');
+    res.send(JSON.stringify({ 'speech': error, 'displayText': error }));
+  });
+};
+function callWeatherApi (city, date) {
+  return new Promise((resolve, reject) => {
+    // Create the path for the HTTP request to get the weather
 
-				'Content-type'	: 'application/json',				
-				'Authorization' : 'Bearer MDM1NDBmNDYtYWE2Yi00OWJiLTg2ZmEtM2JjM2JjNzBkMjFhMjExZWQ5Y2ItMWQ3'
-		},
-
-		body : {
-
-				'roomId': 'Y2lzY29zcGFyazovL3VzL1JPT00vMzQ4ODY1YTAtMzY1ZS0xMWU4LWI4YjgtZDdlMjY2ZGEzOTRm',
-				'personEmail': email,
-				'isModerator': false
-		},
-		
-		json: true // Automatically stringifies the body to JSON
-	};
-	
-
- 
-	rp(options)
-    .then(function (parsedBody) {
-       res.send(parsedBody);
-    })
-    .catch(function (err) {
-	  res.send(err);
-	 
+    console.log('API Request: ' + host);
+    // Make the HTTP request to get the weather
+    http.get({host: host}, (res) => {
+      let body = ''; // var to store the response chunks
+      res.on('data', (d) => { body += d; }); // store each response chunk
+      res.on('end', () => {
+        // After all the data has been received parse the JSON for desired data
+        let response = JSON.parse(body);
+        /*let forecast = response['data']['weather'][0];
+        let location = response['data']['request'][0];
+        let conditions = response['data']['current_condition'][0];
+        let currentConditions = conditions['weatherDesc'][0]['value'];*/
+        // Create response
+        //let output = `Current conditions in the `
+        // Resolve the promise with the output text
+        console.log(response);
+        resolve(response);
+      });
+      res.on('error', (error) => {
+        reject(error);
+      });
     });
-	
-
-});
-
-module.exports = router;
+  });
+}
