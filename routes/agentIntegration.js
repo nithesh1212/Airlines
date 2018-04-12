@@ -28,7 +28,7 @@ const host = 'https://api.ciscospark.com/v1/rooms';
     res.send(JSON.stringify({ 'speech': error, 'displayText': error }));
   });
 };
-function callWeatherApi (city, date) {
+function callWeatherApi () {
   return new Promise((resolve, reject) => {
     // Create the path for the HTTP request to get the weather
 
