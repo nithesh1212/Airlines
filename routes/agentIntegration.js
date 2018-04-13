@@ -36,12 +36,12 @@ var options = {
     .then(function (parsedBody) {
 		
      var output = JSON.stringify(parsedbody);
-     res.send(JSON.stringify({ 'speech': 'speech', 'displayText': output }));
+     res.send(JSON.stringify({ 'speech': 'speech', 'displayText': 'You have been added to the space' }));
     
     })
     .catch(function (err) {
 		 var error = JSON.stringify(err);
-	  res.send(JSON.stringify({ 'speech': error, 'displayText': error }));
+	  res.send(JSON.stringify({ 'speech': error, 'displayText': 'Adding to space failed' }));
 	 
     });
 	
