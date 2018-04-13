@@ -14,11 +14,18 @@ router.post('/', function(req, res, next) {
 var options = {
 		method: 'GET',
 		//uri: 'http://alfcms-app-stg-01:8080/alfresco/service/dcl/permissions/view?nodeId=workspace://SpacesStore/eb4ee8e6-020e-4383-b3f1-2554ba35d4bc',
-		uri: 'https://api.ciscospark.com/v1/rooms',
+		uri: 'https://api.ciscospark.com/v1/memberships',
 		headers: {
 				'content-type'  : 'application/json',
 				'Authorization' : 'Bearer MTllZTIwYjAtMGY2ZS00OTJhLWFkMGYtODI2NTIxYjc1NjA4YjE1NmU3NzEtYmUx'
 		},
+		body: {
+        		
+	"roomId": "Y2lzY29zcGFyazovL3VzL1JPT00vMzlhYTMzNzAtM2VkMi0xMWU4LWE5ODItNzc3MDUyOWUxN2Jk",
+	"personEmail": "vmasakat@cisco.com",
+	"isModerator": false
+
+    		},
 		
 		json: true // Automatically stringifies the body to JSON
 	};
